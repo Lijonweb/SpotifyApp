@@ -1,0 +1,14 @@
+﻿@model SpotifyApp.ViewModels.SpotifyPostSearchVm
+
+<div class="text-center">
+    <form asp-controller="spotifysearch" method="post" asp-action="search" class="form-search">
+        <h1>Search Spotify</h1>
+        <label asp-for="@Model.SearchString"></label><br />
+        <input asp-for="@Model.SearchString" type="text" /><br />
+        <select asp-for="searchType" asp-items="Html.GetEnumSelectList<SpotifyApp.Utils.Enums.SearchType>()">
+            <option selected="selected" value="">Search for</option>
+        </select><br /><br /><br /><br /><br /><br />
+
+        <button class="btn btn-lg btn-primary" type="submit">Search Spotify</button>
+    </form>
+</div>

@@ -1,0 +1,31 @@
+﻿@model SpotifyApp.ViewModels.SearchResultVm
+
+<div>
+    @if (Model.Artists != null)
+    {
+        <p>Artists, by popularity</p>
+        @foreach (var name in Model.Artists)
+        {
+            @name<br />
+        }
+    }
+
+    @if (Model.Tracks != null)
+    {
+        <br />
+        <p>Tracks, by popularity</p>
+        @foreach (var name in Model.Tracks)
+        {
+            @name<br />
+        }
+    }
+    @if (Model.Albums != null)
+    {
+        <br />
+        <p>Albums, by popularity</p>
+        @foreach (var name in Model.Albums)
+        {
+            @name<br />
+        }
+    }
+</div>
